@@ -1,0 +1,498 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+#showcase {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-image: url(/IMAGES/pexels-dmitry-demidov-3783471.jpg),
+    linear-gradient(to right, rgba(22, 22, 151, 0.932), rgb(255, 1, 1));
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  background-color: rgba(0, 0, 0, 0.507);
+  box-shadow: 0px 4px 5px black;
+  position: fixed;
+  z-index: 4;
+}
+.logo h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 3px;
+}
+.logo h1 span {
+  font-size: 3.5rem;
+  color: #940311;
+  font-weight: bolder;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  padding: 5px 20px;
+}
+header ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+header ul a::before {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: red;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  transition: 0.3s linear;
+}
+header ul li:hover a::before {
+  width: 100%;
+}
+.container {
+  position: absolute;
+  top: 35vh;
+  text-align: center;
+  width: 100%;
+}
+.container h1 {
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+.container h1 span {
+  font-size: 3.5rem;
+  color: #940311;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px whitesmoke;
+}
+.container h3 {
+  color: white;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.container p {
+  padding: 0px 100px;
+  color: white;
+  line-height: 22px;
+}
+#click {
+  display: none;
+}
+label h1{
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  label h1 {
+    display: block;
+  }
+  header ul{
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000b2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.4s;
+    z-index: 100;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  .container p {
+    padding: 0px 50px;
+    color: white;
+    line-height: 22px;
+  }
+}
+
+/* ------------THE MUSIC SECTION START HERE NOW=========-------- */
+
+#music{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+  flex-direction: column;
+padding-bottom: 100px;
+}
+.music-head{
+  margin: 50px;
+  width: 100%;
+  text-align: center;
+}
+.music-head h1{
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+.music-head h3{
+  color: white;
+  margin-bottom: 25px;
+}
+.music-head p{
+  color: white;
+  margin-bottom: 20px;
+  padding: 0px 100px;
+}
+.music-head button{
+  padding: 13px 20px;
+  background-color: #940311;
+  color: white;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.music-head button:hover{
+  opacity: 0.8;
+}
+.music-img{
+  width: 90%;
+  margin: auto;
+}
+.music-img img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px cyan;
+}
+
+
+@media screen and (max-width:680px) {
+  .music-head h1{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .music-head h3{
+    color: white;
+    margin-bottom: 20px;
+  }
+  .music-head p{
+    color: white;
+    margin-bottom: 15px;
+    padding: 0px 30px;
+  } 
+  .music-head button{
+    padding: 10px 15px;
+    background-color: #940311;
+    color: white;
+    outline: none;
+    border-radius: 4px;
+    font-size: 12px;
+    border: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #music{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    flex-direction: column;
+  padding-bottom: 40px;
+  }
+  .music-head p{
+    line-height: 22px;
+  }
+}
+
+
+/* ---------THE COLLECTION  SECTION START HERE---------- */
+
+#watch{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+  padding: 60px 0px;
+}
+.watch-head{
+  margin: 50px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.watch-head h1{
+  color: black;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+.watch-head h3{
+  color: black;
+  margin-bottom: 25px;
+}
+.watch-head p{
+  color: black;
+  margin-bottom: 20px;
+  padding: 0px 100px;
+}
+.watch-head button {
+  padding: 13px 20px;
+  background-color: #940311;
+  color: white;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.watch-img{
+  width: 90%;
+}
+.watch-img img{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px cyan;
+}
+@media screen and (max-width:680px) {
+  .watch-head h1{
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .watch-head h3{
+    color: black;
+    margin-bottom: 25px;
+  }
+  .watch-head p{
+    color: black;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    line-height: 22px;
+  }
+  .watch-head button {
+    padding: 10px 15px;
+    background-color: #940311;
+    color: white;
+    outline: none;
+    border-radius: 4px;
+    font-size: 12px;
+    border: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+
+
+/*=========== THE ENTERNMENT SECTION START HERE NOW===================== */
+
+#enterment{
+  width: 100%;
+  background: linear-gradient(to top, rgb(0, 0, 0),rgb(49, 47, 47));
+  display: flex;
+  align-items: center;
+  padding: 50px 0px;
+}
+.ent-box{
+  width: 90%;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+.ent-box h2{
+  padding-bottom: 30px;
+}
+.ent-box p {
+  line-height: 25px;
+  padding: 0px 20px;
+}
+
+/*=========== THE GIFT CARD SECTION START HERE============================*/
+
+#gifts{
+  width: 100%;
+  padding: 100PX 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards{
+  width: 44%;
+}
+.cards img{
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px cyan;
+}
+.card-dec{
+  width: 50%;
+  box-shadow: 0px 0px 5px gray;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.card-dec h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.card-dec p {
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.red{
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media screen and (max-width:755px) {
+  .card-dec{
+    width: 50%;
+    box-shadow: 0px 0px 5px gray;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .card-dec h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+  .card-dec p {
+    line-height: 22px;
+    margin-bottom: 10px;
+  } 
+}
+@media screen and (max-width:655px) {
+  #gifts{
+    width: 100%;
+    padding: 50PX 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .cards{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .cards img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px cyan;
+  }
+  .card-dec{
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 0px 5px gray;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .card-dec h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  .card-dec p {
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .red{
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+  } 
+}
+
+
+/*=================================================== THE FOOTER SECTION START HERE NOW=================================== */
+
+#foot {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  background-color: rgb(22, 21, 21);
+  justify-content: space-between;
+}
+#foot ul{
+  width: 24%;
+}
+#foot ul li{
+  margin: 10px 0px;
+  color: white;
+  font-size: 1.2rem;
+}
+#foot ul li a{
+  color: white;
+  font-size: 13px;
+}
+#foot ul .line{
+  padding: 0px 0px 10px 0px;
+  border-bottom: 1px solid white;
+}
+@media screen and (max-width:1027px) {
+  #foot {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    flex-wrap: wrap;
+    background-color: rgb(22, 21, 21);
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+  #foot ul{
+    width: 49%;
+    text-align: center;
+  }
+  #foot ul li{
+    margin: 10px 0px;
+    color: white;
+    font-size: 1.4rem;
+  }
+  #foot ul li a{
+    color: white;
+    font-size: 15px;
+  }
+  #foot ul .line{
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid white;
+  } 
+}
+@media screen and (max-width:617px) {
+  #foot {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    flex-wrap: wrap;
+    background-color: rgb(22, 21, 21);
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+  #foot ul{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  } 
+}
